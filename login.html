@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <form action="/login" method="POST">
+        <p>Enter Username:</p>
+        <p><input type="text" name="username" /></p>
+        <p>Enter Password:</p>
+        <p><input type="password" name="password" /></p>
+        <p><input type="submit" value="Submit" /></p>
+        <button><a href="{{url_for('register')}}">Register</a></button>
+    </form>
+</body>
+</html>
