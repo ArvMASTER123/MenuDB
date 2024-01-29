@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<table style="width:20%">
+    <tr>
+        <th>Hot Drinks</th>
+
+    </tr>
+    {%for food in food%}
+    {% if food.food_type=='hot drink'%}
+    <tr>
+        <td><a href="javascript:window.open('{{url_for('menu', type = food.food_name)}}','width=20,height=50', left=400, top=10);">{{food.food_name}}</a></td>
+        <td><img src="/static/{{foodpath}}" width="100" height="100" ></td>
+    </tr>
+    {%endif%}
+    {%endfor%}
+</table>
+
+<button><a href="{{url_for('addfood')}}">Add Food</a></button>
+</body>
+</html>
